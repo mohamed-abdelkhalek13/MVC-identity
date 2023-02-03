@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Login Page</h1>
+@model LoginVM;
+<form action="/Home/getLoginInfo">
+    <label>Email</label>
+    <input asp-for="email" type="text"/>
+
+    <label>Password</label>
+    <input  asp-for="password" type="text"/>
+
+    <label>Remember me</label>
+    <input asp-for="rememberMe" type="checkbox"/>
+
+    <input type="submit" value="login"/>
+
+    
+</form>
+<a asp-action="Index" asp-controller="user">Register</a>
